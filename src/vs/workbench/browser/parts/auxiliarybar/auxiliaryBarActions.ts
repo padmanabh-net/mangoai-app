@@ -61,7 +61,7 @@ export class ToggleAuxiliaryBarAction extends Action2 {
 					order: 1
 				},
 				{
-					id: MenuId.MenubarApblueberryanceMenu,
+					id: MenuId.MenubarApmangoanceMenu,
 					group: '2_workbench_layout',
 					order: 2
 				}
@@ -229,31 +229,31 @@ export class ResizeAuxiliaryBarWidthAction extends Action2 {
 
 registerAction2(ResizeAuxiliaryBarWidthAction);
 
-class FocusblueberryAIExtensionAction extends Action2 {
-	static readonly ID = 'workbench.action.focusblueberryAIExtension';
+class FocusmangoAIExtensionAction extends Action2 {
+	static readonly ID = 'workbench.action.focusmangoAIExtension';
 	static readonly LABEL = localize2(
-		"focusblueberryAIExtension",
-		"Focus into blueberryAI Extension",
+		"focusmangoAIExtension",
+		"Focus into mangoAI Extension",
 	);
 
 	constructor() {
 		super({
-			id: FocusblueberryAIExtensionAction.ID,
-			title: FocusblueberryAIExtensionAction.LABEL,
+			id: FocusmangoAIExtensionAction.ID,
+			title: FocusmangoAIExtensionAction.LABEL,
 			category: Categories.View,
 			f1: true,
-			// keybinding: do not add keybinding CTRL/CMD L here, it comes from blueberryai extension
+			// keybinding: do not add keybinding CTRL/CMD L here, it comes from mangoai extension
 		});
 	}
 
 	override async run(accessor: ServicesAccessor): Promise<void> {
-		// focus blueberryai extension
+		// focus mangoai extension
 		const commandService = accessor.get(ICommandService);
-		commandService.executeCommand('blueberryai.focusContinueInput');
+		commandService.executeCommand('mangoai.focusContinueInput');
 	}
 }
 
-registerAction2(FocusblueberryAIExtensionAction);
+registerAction2(FocusmangoAIExtensionAction);
 
 MenuRegistry.appendMenuItems([
 	{
@@ -261,7 +261,7 @@ MenuRegistry.appendMenuItems([
 		item: {
 			group: '0_workbench_toggles',
 			command: {
-				id: FocusblueberryAIExtensionAction.ID,
+				id: FocusmangoAIExtensionAction.ID,
 				title: `New Chat (${KeyModUtils.keyModToString(KeyMod.CtrlCmd)} + ${KeyCodeUtils.toString(KeyCode.KeyL)})`,
 			},
 			order: -1,
@@ -269,22 +269,22 @@ MenuRegistry.appendMenuItems([
 	},
 ]);
 
-// Following is a only blueberryAI related action, need to refactor these type of actions to separate file
+// Following is a only mangoAI related action, need to refactor these type of actions to separate file
 import { IOpenerService } from 'vs/platform/opener/common/opener';
 import { URI } from 'vs/base/common/uri';
 import { IProductService } from 'vs/platform/product/common/productService';
 
-class OpenblueberryAIDocsAction extends Action2 {
-	static readonly ID = 'workbench.action.openblueberryAIDocs';
+class OpenmangoAIDocsAction extends Action2 {
+	static readonly ID = 'workbench.action.openmangoAIDocs';
 	static readonly LABEL = localize2(
-		"openblueberryAIDocs",
-		"Open blueberryAI Documentation",
+		"openmangoAIDocs",
+		"Open mangoAI Documentation",
 	);
 
 	constructor() {
 		super({
-			id: OpenblueberryAIDocsAction.ID,
-			title: OpenblueberryAIDocsAction.LABEL,
+			id: OpenmangoAIDocsAction.ID,
+			title: OpenmangoAIDocsAction.LABEL,
 			category: Categories.Help,
 			f1: true,
 		});
@@ -293,21 +293,21 @@ class OpenblueberryAIDocsAction extends Action2 {
 	override async run(accessor: ServicesAccessor): Promise<void> {
 		const openerService = accessor.get(IOpenerService);
 		const productService = accessor.get(IProductService);
-		if (!productService.blueberryAILinks?.docs) {
+		if (!productService.mangoAILinks?.docs) {
 			return;
 		}
-		await openerService.open(URI.parse(productService.blueberryAILinks?.docs));
+		await openerService.open(URI.parse(productService.mangoAILinks?.docs));
 	}
 }
 
-registerAction2(OpenblueberryAIDocsAction);
+registerAction2(OpenmangoAIDocsAction);
 
 MenuRegistry.appendMenuItems([
 	{
 		id: MenuId.CommandCenter,
 		item: {
 			command: {
-				id: OpenblueberryAIDocsAction.ID,
+				id: OpenmangoAIDocsAction.ID,
 				title: 'Docs',
 			},
 			order: 150,

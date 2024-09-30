@@ -1,4 +1,4 @@
-[submodule "extensions/blueberryai-submodule"]
-	path = extensions/blueberryai-submodule
-	url = https://github.com/tryblueberry/blueberryai-submodule.git
+[submodule "extensions/mangoai-submodule"]
+	path = extensions/mangoai-submodule
+	url = https://github.com/trymango/mangoai-submodule.git
 	branch = main

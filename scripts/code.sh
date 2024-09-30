@@ -2,7 +2,7 @@
 
 set -e
 
-cd extensions/blueberryai-submodule
+cd extensions/mangoai-submodule
 ./scripts/install-and-build.sh
 cd ../..
 
