@@ -16,7 +16,7 @@ Welcome to the mangoAI app! mangoAI is a fork of VSCode (and Continue), with mos
 
 ## 🚀 Getting Started
 
-After cloning and building the repo, check out our [issues list](https://github.com/trymango/mangoai-app/issues). For first-time contributors, issues labeled [`good first issue`](https://github.com/trymango/mangoai-app/issues?q=is%3Aissue+is%3Aopen+label%3A%22Good+First+Issue%22) are great starting points. If you're contributing significant changes, or if the issue is already assigned to a specific milestone, please discuss with the assignee first on [Discord](https://discord.gg/7QMraJUsQt).
+After cloning and building the repo, check out our [issues list](https://github.com/trymango/mangoai-app/issues). For first-time contributors, issues labeled [`good first issue`](https://github.com/trymango/mangoai-app/issues?q=is%3Aissue+is%3Aopen+label%3A%22Good+First+Issue%22) are great starting points. If you're contributing significant changes, or if the issue is already assigned to a specific milestone, please discuss with the assignee first on [Example](https://example.com/7QMraJUsQt).
 
 ## 🛠 Prerequisites
 
@@ -142,7 +142,7 @@ To enable us to quickly review and accept your pull requests, always create one 
 Before you submit an issue, please do a search in [open issues](https://github.com/trymango/mangoai/issues) to see if the issue or feature request has already been filed.
 Use the provided issue template when creating a new issue. Fill in the template with as much detail as possible. The more detail you provide, the more likely that someone can help you.
 Alternatively, you can use mango to create a ticket for the problem first. Simply describe the issue or feature request, and mango will create a ticket for it. This can help you understand the problem better and guide you in manually solving it.
-You can also directly ping the maintainers or admins in the [Discord](https://discord.gg/7QMraJUsQt).
+You can also directly ping the maintainers or admins in the [Example](https://example.com/7QMraJUsQt).
 
 ## ⚙️ Packaging
 
